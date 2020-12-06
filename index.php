@@ -4,7 +4,8 @@
      <title>2TIW Devops - Calculator</title>
      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
      <link rel="stylesheet" href="assets/css/style.css">
-     <link rel="stylesheet" type="text/css" href="<?php echo shell_exec("hostname -I | awk '{print $1}'") == "192.168.44.131" ? 'Prod.style.css' : 'Test.style.css'; ?>">
+     <?php $raar = shell_exec("hostname -I | awk '{print $1}'"); ?>
+     <link rel="stylesheet" type="text/css" href="<?php $raar == '192.168.44.131' ? 'Prod.style.css' : 'Test.style.css'; ?>">
     </head>
     <body>
     <h1>2TIW DevOps - Calculator</h1><hr/>
